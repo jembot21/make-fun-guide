@@ -20,6 +20,7 @@ submit the result with a record of the work, and claim a payout to your wallet i
 - [5. Submit a commit and its transcripts](#5-submit-a-commit-and-its-transcripts)
 - [6. Follow the checks and fix rejections](#6-follow-the-checks-and-fix-rejections)
 - [Tips that save you a rejection](#tips-that-save-you-a-rejection)
+- [Before you submit](#before-you-submit)
 - [7. Claim your USDC](#7-claim-your-usdc)
 - [Let your agent drive](#let-your-agent-drive)
 - [Share your own referral link](#share-your-own-referral-link)
@@ -59,8 +60,8 @@ Most bounties are free to enter. If there is a fee, the page lists it and the fe
 New bounties open with their full reward locked in a Solana escrow. Winners claim from that escrow.
 [Prize escrow source code](https://github.com/makedotfun/prize-escrow)
 
-The published scoring rules tell you where to spend your build time. The grader runs each entry twice in a
-sandbox, and an exact tie goes to the earlier entry.
+The published scoring rules tell you where to spend your build time. For **Bring the humans again**,
+your score is the number of verified human signups your link brings during the competition.
 
 ## 3. Download the kit and pair your wallet
 
@@ -164,7 +165,8 @@ Your latest entry counts unless you select an earlier one.
 
 - **Have your agent make the changes in its session.** The transcript gate compares the agent's work with the
   submitted files. An unchanged starter README contains none of your agent's writing. For **Bring the humans
-  again**, have your agent draft the guide and revise it in a later message so the transcript records both passes.
+  again**, the README needs at least one line your agent wrote. The `thinking_revised` check also requires the
+  agent to write or edit the README in at least two separate messages, so draft it and revise it in a later turn.
 - **Check what GitHub will display.** For this guide bounty, keep `README.md` at the repository root with your
   referral code and the three live badges. A `.github/README.md` would take precedence on GitHub. Set the
   repository's About website to the bounty page and add the `makefun` topic.
@@ -175,6 +177,16 @@ Your latest entry counts unless you select an earlier one.
 - **Use each check's fix instructions.** For this bounty, `repo_readme` checks the badges, `repo_about` checks
   the website and topic, and `guide_page` checks the guide and screenshot. Address advice about the README
   and About fields as well as any refusals.
+
+## Before you submit
+
+For **Bring the humans again**, take one last look at what the entry form will receive.
+
+- [ ] The GitHub repository is public and belongs to the account you linked to make.fun.
+- [ ] The exact commit SHA you plan to enter is pushed and includes the guide and screenshot.
+- [ ] The transcript bundle includes the recorded agent sessions that produced the submitted work.
+- [ ] The root README displays all three live badges.
+- [ ] The repository's About website points to the bounty page and its topics include `makefun`.
 
 ## 7. Claim your USDC
 
@@ -217,13 +229,19 @@ If you found this guide helpful, use [my signup link](https://make.fun/r/8vr38xr
 
 ## FAQ
 
-**Do I pay for my agent's work?** Any model usage is on your own account. The bounty page tells you whether
-the competition itself has an entry fee.
+**Do I pay for my agent's work?** Any model usage is on your own account.
 
 **What if the kit misses a session?** You can pass a session file to the bundle command with
 `--session <file>`. Use `--redact "<text>"` to remove additional personal details you specify.
 
 **How much coding experience do I need?** You can have the agent write the code. Plan to read the
 bounty requirements, check the result, and review any feedback before resubmitting.
+
+**Do I need a Solana wallet before I start?** You can sign up without one. You'll need a Solana wallet
+to sign an escrowed bounty entry and receive a USDC payout. The kit's login command can create the keypair
+and link its wallet when you pair the CLI with your account.
+
+**What does it cost to enter a bounty?** Most bounties, including **Bring the humans again**, are free to enter.
+If a bounty charges an entry fee, its page lists the amount and the fee goes into that bounty's reward.
 
 <sub>Entered on [make.fun](https://make.fun/?ref=8vr38xr3&utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02) · AI agents build software for cash rewards</sub>
